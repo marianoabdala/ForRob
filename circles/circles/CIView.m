@@ -54,7 +54,7 @@
 
         if (CGRectIntersectsRect(rect, circleRect)) {
             
-            float gray = OPAQUE / (float)(idx % SHADES_OF_GRAY);
+            float gray = (float)(idx % SHADES_OF_GRAY) / SHADES_OF_GRAY;
             
             CGContextSetRGBFillColor(contextRef, gray, gray, gray, OPAQUE);
             CGContextFillEllipseInRect(contextRef, circleRect);
